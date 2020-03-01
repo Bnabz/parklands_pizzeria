@@ -14,7 +14,7 @@ body{
   padding-bottom: 200px;
 
 }
-#header-title, #order-title{
+.section-title{
   text-align: center;
 }
 hr{
@@ -22,4 +22,12 @@ hr{
 }
 .pizza_img{
   height: 300px
+}
+#delivery-option{
+  align-items: : center;
+}
+footer{
+  padding-top: 35px;
+  margin-bottom:30px;
+  text-align: center;
 }
