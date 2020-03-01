@@ -14,7 +14,7 @@ body{
   padding-bottom: 200px;
 
 }
-#header-title{
+#header-title, #order-title{
   text-align: center;
 }
 hr{
