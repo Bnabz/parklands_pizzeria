@@ -76,13 +76,46 @@
           </div>
         </div>
        </div>
+    </div>
 
 
+    <div class="container">
+      <form class="col-md-6 offset-md-3 text-center">
+              <label>Select Your Pizza:</label>
+              <select class="custom-select"  id ="type" required>
+                  <option value="beef_bbq">Beef Barbeque</option>
+                  <option value="coto_bene">Coto Bene</option>
+                  <option value="hawaiian">Hawaiiian Chicken</option>
+                  <option value="margherita">Margherita</option>
+                  <option value="neapolitana">Neapolitana</option>
+                  <option value="salmone">Salmone</option>
+              </select>
+              <label>Select your preferred Size:</label>
+              <select class="custom-select" id ="size" required>
+                  <option value="regular">Regular @ Ksh. 500</option>
+                  <option value="medium">Medium @ Ksh. 800</option>
+                  <option value="large">Large @ Ksh. 1000</option>
+              </select>
+              <label for="crust">Choose your favorite Crust:</label>
+              <select class="custom-select"  id="crust" required>
+                  <option value="thin">Thin Crust @ Ksh. 100</option>
+                  <option value="thick">Stuffed @ Ksh. 150</option>
+                  <option value="flatbread">Gluten-free @ sh. 180</option>
+              </select>
+              <label>Select Your favourite Toppings</label>
+              <select class="custom-select " id="toppings" >
+                  <option value="cheese">Cheese @ ksh. 100</option>
+                  <option value="pineapple">Onions @ ksh. 100</option>
+                  <option value="mushroom">Mushroom @ ksh. 80</option>
+                  <option value="onion">Green Pepper @ ksh. 80</option>
+                  <option value="bacon">bacon @ ksh. 150</option>
+
+              </select>
+              <label for="number">Number of Pizza's</label>
+              <input type="number" class="form-control" id="number" placeholder="Number of pizzas" min="1" required>
 
 
-
-
-
+          </form>
     </div>
 
   </body>
