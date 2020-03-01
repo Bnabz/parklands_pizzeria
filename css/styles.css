@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap');
+body{
+  font-family: 'Didact Gothic';
+}
+#intro{
+  background-image: url('../assets/intro.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  align-items: center;
+  text-align: center;
+  color:white;
+  padding-top: 200px;
+  padding-bottom: 200px;
+
+}
