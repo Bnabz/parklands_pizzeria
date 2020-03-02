@@ -7,7 +7,7 @@ class Pizza = function(type, size, crust, toppings, number, delivery){
     this.number = number;
   }
 
-  sizePrice = function(){
+Pizza.prototype.sizePrice = function(){
     if (this.size === "regular") {
       return 500;
     } else if (this.size === "medium"){
@@ -16,6 +16,32 @@ class Pizza = function(type, size, crust, toppings, number, delivery){
       return 1000;
     }
   }
+
+Pizza.prototype.crustPrice = function(){
+    if (this.crust === "thin") {
+      return 100;
+    } else if (this.crust === "stuffed"){
+      return 150;
+    } else if (this.crust === "gluten-free") {
+      return 180;
+    }
+  }
+
+Pizza.prototype.toppingsPrice = function(){
+    if (this.toppings === "cheese") {
+      return 100;
+    } else if (this.toppings === "pineapple"){
+      return 100;
+    } else if (this.toppings === "mushroom") {
+      return 80;
+    }else if (this.toppings === "onion") {
+      return 80;
+    }
+    else if (this.toppings === "bacon") {
+      return 150;
+    }
+  }
+
 
 
 
