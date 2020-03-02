@@ -78,9 +78,10 @@ $("#checkout").click(function() {
 });
 
 
-
-
-
+$("#checkout").click(function() {
+  event.preventDefault();
+$('#regTitle').text('Hello world');
+});
 
 
 
