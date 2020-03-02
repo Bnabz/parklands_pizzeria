@@ -24,10 +24,13 @@ hr{
   height: 300px
 }
 #delivery-option{
-  align-items: : center;
+  align-items: center;
 }
 footer{
   padding-top: 35px;
   margin-bottom:30px;
   text-align: center;
+}
+#delivery-form{
+  display:none;
 }
