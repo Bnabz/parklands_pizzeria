@@ -1,5 +1,5 @@
 //Business logic
-class Pizza = function(type, size, crust, toppings, number, delivery){
+Pizza = function(type, size, crust, toppings, number, delivery){
     this.type = type;
     this.size = size;
     this.crust = crust;
@@ -43,8 +43,9 @@ Pizza.prototype.toppingsPrice = function(){
     }
   }
 
-Pizza.prototype.totalPrice = function(size,crust,toppings,number){
-    return(size+crust+toppings)*number;
+Pizza.prototype.totalPrice = function(){
+    return(this.toppingsPrice() + this.crustPrice() + this.sizePrice());
+
   }
 
 
@@ -55,13 +56,16 @@ Pizza.prototype.totalPrice = function(size,crust,toppings,number){
 $(document).ready(function() {
 
 $("#checkout").click(function() {
+  event.preventDefault();
+  let newType = $("#type option:selected").val();
+  let newSize = $("#size option:selected").val();
+  let newCrust = $("#crust option:selected").val();
+  let newToppings = $("#toppings option:selected").val();
+  let newNumber = parseInt($("#number").val());
+  let meal = new Pizza (newType, newSize, newCrust, newToppings, newNumber,)
 
-  let Pizza.type = $("#type option:selected").val();
-  let Pizza.size = $("#size option:selected").val();
-  let Pizza.crust = $("#crust option:selected").val();
-  let Pizza.topping = $("#toppings option:selected").val();
-  let Pizza.number = parseInt($("#number").val());
-
+  let cost = meal.totalPrice();
+  alert("You have ordered a"+" "+meal.size+" " +meal.type +" "+"pizza. Total cost is"+" "+cost+"."+" "+"Please choose between delivery and pickup");
 
 
 
