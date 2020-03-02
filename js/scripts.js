@@ -1,3 +1,4 @@
+//Business logic
 class Pizza = function(type, size, crust, toppings, number, delivery){
     this.type = type;
     this.size = size;
@@ -50,7 +51,7 @@ Pizza.prototype.totalPrice = function(size,crust,toppings,number){
 
 
 
-
+//User interface logic
 $(document).ready(function() {
  function getSizeCost() {
      var selectedSize = document.getElementById("size").value;
