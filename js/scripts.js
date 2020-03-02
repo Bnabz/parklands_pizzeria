@@ -66,7 +66,11 @@ $("#checkout").click(function() {
 
   let cost = meal.totalPrice();
   alert("You have ordered a"+" "+meal.size+" " +meal.type +" "+"pizza. Total cost is"+" "+cost+"."+" "+"Please choose between delivery and pickup");
-
+  $(".summary_type").text(newType);
+  $(".summary_size").text(newSize);
+  $(".summary_toppings").text(newToppings);
+  $(".summary_number").text(newNumber);
+  $(".summary_type").text("hawaiian");
 
 
 
@@ -78,10 +82,7 @@ $("#checkout").click(function() {
 });
 
 
-$("#checkout").click(function() {
-  event.preventDefault();
-$('#regTitle').text('Hello world');
-});
+
 
 
 
