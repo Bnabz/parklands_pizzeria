@@ -42,6 +42,10 @@ Pizza.prototype.toppingsPrice = function(){
     }
   }
 
+Pizza.prototype.totalPrice = function(size,crust,toppings,number){
+    return(size+crust+toppings)*number;
+  }
+
 
 
 
