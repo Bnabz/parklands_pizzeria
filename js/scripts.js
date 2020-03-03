@@ -50,10 +50,6 @@ Pizza.prototype.totalPrice = function(){
   }
 
 
-
-
-
-
 //User interface logic
 $(document).ready(function() {
 

@@ -30,13 +30,23 @@ footer{
   padding-top: 35px;
   margin-bottom:30px;
   text-align: center;
+  font-size: 150%;
+  font-weight: bold;
+  color:white;
+
 }
 #delivery-form,#summary, #pickup-summary,.deliver,.pick_up,#delivery-summary{
   display:none;
 }
 #menu{
  padding: 20px;
- background-color:#8B4513;
+ background-color:#DEB887;
  border-radius: 20px;
  margin-bottom: 30px
+}
+.contacts{
+    background-image: url('../assets/contact.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
