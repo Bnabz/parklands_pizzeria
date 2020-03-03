@@ -56,7 +56,7 @@ Pizza.prototype.totalPrice = function(){
 $(document).ready(function() {
 
 $("#checkout").click(function() {
-  event.preventDefault();
+   event.preventDefault();
   let newType = $("#type option:selected").val();
   let newSize = $("#size option:selected").val();
   let newCrust = $("#crust option:selected").val();
@@ -65,15 +65,12 @@ $("#checkout").click(function() {
   let meal = new Pizza (newType, newSize, newCrust, newToppings, newNumber,)
 
   let cost = meal.totalPrice();
-  alert("You have ordered a"+" "+meal.size+" " +meal.type +" "+"pizza. Total cost is"+" "+cost+"."+" "+"Please choose between delivery and pickup");
-  $(".summary_type").text(newType);
-  $(".summary_size").text(newSize);
-  $(".summary_toppings").text(newToppings);
-  $(".summary_number").text(newNumber);
-  $(".summary_type").text("hawaiian");
-
-
-
+  $("#summary").fadeIn(3000);
+  $(".summary_type").text("Type" + ":" + " " + newType);
+  $(".summary_size").text("Size" + ":" + " " + newSize);
+  $(".summary_toppings").text("Toppings" + ":" + " " + newToppings);
+  $(".summary_number").text("Toppings" + ":" + " " + newNumber);
+  $(".summary_cost").text("Cost" + ":" + " " + cost);
 
 
 
@@ -82,22 +79,21 @@ $("#checkout").click(function() {
 });
 
 
+$(".deliver").click(function() {
+   event.preventDefault();
+   $("#summary").fadeOut();
+   $("#delivery-form").fadeIn(3000);
 
 
+});
+
+$(".pick_up").click(function() {
+   event.preventDefault();
+   $("#summary").fadeOut();
+   $("#pickup-summary").fadeIn(3000);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+});
 
 
 

@@ -31,6 +31,6 @@ footer{
   margin-bottom:30px;
   text-align: center;
 }
-/*#delivery-form{
+#delivery-form,#summary, #pickup-summary,.deliver,.pick_up{
   display:none;
 }

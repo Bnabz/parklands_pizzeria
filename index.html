@@ -124,9 +124,9 @@
           </form>
     </div>
 
-    <div class="d-block mx-auto text-center">
-     <button class='deliver'>Delivery</button>
-     <button class='delivernot'>Pick up</button>
+    <div class="d-block mx-auto text-center" id = "delivery-button">
+     <button class="deliver">Delivery</button>
+     <button class="pick_up">Pick up</button>
    </div>
 
    <div class="container" id ="summary">
@@ -139,21 +139,36 @@
             <p class= "summary_size"> </br></p>
             <p class= "summary_toppings"></br></p>
             <p class= summary_number></br></p>
+            <p class= summary_cost></br></p>
+            <p>Please choose between delivery and pick-up</p>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-   <div class="container" ></div>
-     <form class="col-md-6 offset-md-3 text-center"id ="delivery-form" >
-       <input type="text" class="form-control " placeholder="Name:">
-       <input type="tel" class="form-control " placeholder="Phone Number: ">
-       <input type="text" class="form-control " placeholder="Estate: ">
-       <input type="text" class="form-control " placeholder="Address: ">
-       <button class="btn bg-info text-center d-block mx-auto">Submit</button>
-     </form>
+
+
+  <div class="container" id ="pickup-summary">
+   <div class="row ">
+     <div class=" col-md-4 offset-md-4">
+       <div class="card align-items-center">
+          <p>Thank you for placing your order.Kindly pick your meal from our restaurant at Diamond plaza.</p>
+       </div>
+     </div>
     </div>
+  </div>
+
+
+  <div class="container" ></div>
+   <form class="col-md-6 offset-md-3 text-center"id ="delivery-form" >
+     <input type="text" class="form-control " placeholder="Name:">
+     <input type="tel" class="form-control " placeholder="Phone Number: ">
+     <input type="text" class="form-control " placeholder="Estate: ">
+     <input type="text" class="form-control " placeholder="Address: ">
+     <button class="btn bg-info text-center d-block mx-auto">Submit</button>
+   </form>
+  </div>
 
    <div class="container section-title">
      <h1>Contacts</h1>
