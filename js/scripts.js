@@ -1,4 +1,5 @@
 //Business logic
+var cost;
 Pizza = function(type, size, crust, toppings, number, delivery){
     this.type = type;
     this.size = size;
@@ -52,6 +53,7 @@ Pizza.prototype.totalPrice = function(){
 
 
 
+
 //User interface logic
 $(document).ready(function() {
 
@@ -64,12 +66,14 @@ $("#checkout").click(function() {
   let newNumber = parseInt($("#number").val());
   let meal = new Pizza (newType, newSize, newCrust, newToppings, newNumber,)
 
-  let cost = meal.totalPrice();
+  cost = meal.totalPrice();
   $("#summary").fadeIn(3000);
+  $(".deliver").fadeIn();
+  $(".pick_up").fadeIn();
   $(".summary_type").text("Type" + ":" + " " + newType);
   $(".summary_size").text("Size" + ":" + " " + newSize);
   $(".summary_toppings").text("Toppings" + ":" + " " + newToppings);
-  $(".summary_number").text("Toppings" + ":" + " " + newNumber);
+  $(".summary_number").text("Quantity" + ":" + " " + newNumber);
   $(".summary_cost").text("Cost" + ":" + " " + cost);
 
 
@@ -94,6 +98,20 @@ $(".pick_up").click(function() {
 
 
 });
+
+
+
+  $("#delivery-form").submit(function(event){
+   event.preventDefault();
+   let name = $("#name").val();
+   let estate = $("#estate").val();
+   let address = $("#address").val();
+   let newCost= cost+200
+    $("#summary-text").text("Thank"+" "+"you"+","+" "+name+"."+ " "+"your"+" "+"order"+" "+"shall"+" "+"be"+" "+"delivered"+" "+"to"+" "+address+","+" "+estate+"."+" "+"Delivery"+" "+"charge"+" "+"is"+"Ksh.200"+","+" "+"bringing"+ " "+"the"+" "+"total"+" "+"cost"+" "+"to"+" "+"Ksh."+newCost+".");
+     $("#delivery-form").fadeOut();
+    $("#delivery-summary").fadeIn(3000);
+
+  });
 
 
 
