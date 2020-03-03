@@ -49,50 +49,42 @@ Pizza.prototype.totalPrice = function(){
 
   }
 
-
 //User interface logic
 $(document).ready(function() {
+  $("#checkout").click(function() {
+     event.preventDefault();
+    let newType = $("#type option:selected").val();
+    let newSize = $("#size option:selected").val();
+    let newCrust = $("#crust option:selected").val();
+    let newToppings = $("#toppings option:selected").val();
+    let newNumber = parseInt($("#number").val());
+    if (Number.isInteger(newNumber)===false){newNumber=0};
+    let meal = new Pizza (newType, newSize, newCrust, newToppings, newNumber,)
 
-$("#checkout").click(function() {
-   event.preventDefault();
-  let newType = $("#type option:selected").val();
-  let newSize = $("#size option:selected").val();
-  let newCrust = $("#crust option:selected").val();
-  let newToppings = $("#toppings option:selected").val();
-  let newNumber = parseInt($("#number").val());
-  let meal = new Pizza (newType, newSize, newCrust, newToppings, newNumber,)
+    cost = meal.totalPrice();
+    $("#summary").fadeIn(3000);
+    $(".deliver").fadeIn();
+    $(".pick_up").fadeIn();
+    $(".summary_type").text("Type" + ":" + " " + newType);
+    $(".summary_size").text("Size" + ":" + " " + newSize);
+    $(".summary_toppings").text("Toppings" + ":" + " " + newToppings);
+    $(".summary_number").text("Quantity" + ":" + " " + newNumber);
+    $(".summary_cost").text("Cost" + ":" + " " + cost);
 
-  cost = meal.totalPrice();
-  $("#summary").fadeIn(3000);
-  $(".deliver").fadeIn();
-  $(".pick_up").fadeIn();
-  $(".summary_type").text("Type" + ":" + " " + newType);
-  $(".summary_size").text("Size" + ":" + " " + newSize);
-  $(".summary_toppings").text("Toppings" + ":" + " " + newToppings);
-  $(".summary_number").text("Quantity" + ":" + " " + newNumber);
-  $(".summary_cost").text("Cost" + ":" + " " + cost);
-
-
-});
-
-
-$(".deliver").click(function() {
-   event.preventDefault();
-   $("#summary").fadeOut();
-   $("#delivery-form").fadeIn(3000);
+  });
 
 
-});
+  $(".deliver").click(function() {
+     event.preventDefault();
+     $("#summary").fadeOut();
+     $("#delivery-form").fadeIn(3000);
+  });
 
-$(".pick_up").click(function() {
-   event.preventDefault();
-   $("#summary").fadeOut();
-   $("#pickup-summary").fadeIn(3000);
-
-
-});
-
-
+  $(".pick_up").click(function() {
+     event.preventDefault();
+     $("#summary").fadeOut();
+     $("#pickup-summary").fadeIn(3000);
+  });
 
   $("#delivery-form").submit(function(event){
    event.preventDefault();
@@ -103,25 +95,6 @@ $(".pick_up").click(function() {
     $("#summary-text").text("Thank"+" "+"you"+","+" "+name+"."+ " "+"your"+" "+"order"+" "+"shall"+" "+"be"+" "+"delivered"+" "+"to"+" "+address+","+" "+estate+"."+" "+"Delivery"+" "+"charge"+" "+"is"+"Ksh.200"+","+" "+"bringing"+ " "+"the"+" "+"total"+" "+"cost"+" "+"to"+" "+"Ksh."+newCost+".");
      $("#delivery-form").fadeOut();
     $("#delivery-summary").fadeIn(3000);
-
   });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 });

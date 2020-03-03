@@ -12,7 +12,7 @@ body{
   color:white;
   padding-top: 200px;
   padding-bottom: 200px;
-
+  font-weight: bold;
 }
 .section-title{
   text-align: center;
@@ -49,4 +49,15 @@ footer{
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+#summary,#pickup-summary{
+ padding: 20px;
+ background-color:#DEB887;
+
+}
+@media screen and (max-width: 450px) {
+  #menu{
+      width: 50%;
+  }
+
 }
