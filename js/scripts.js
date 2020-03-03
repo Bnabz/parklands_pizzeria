@@ -58,19 +58,23 @@ $(document).ready(function() {
     let newCrust = $("#crust option:selected").val();
     let newToppings = $("#toppings option:selected").val();
     let newNumber = parseInt($("#number").val());
-    if (Number.isInteger(newNumber)===false){newNumber=0};
+    if (Number.isInteger(newNumber)===false){
+      newNumber=0
+      alert("please choose the number of pizzas you would like to order")
+    };
     let meal = new Pizza (newType, newSize, newCrust, newToppings, newNumber,)
 
-    cost = meal.totalPrice();
-    $("#summary").fadeIn(3000);
-    $(".deliver").fadeIn();
-    $(".pick_up").fadeIn();
-    $(".summary_type").text("Type" + ":" + " " + newType);
-    $(".summary_size").text("Size" + ":" + " " + newSize);
-    $(".summary_toppings").text("Toppings" + ":" + " " + newToppings);
-    $(".summary_number").text("Quantity" + ":" + " " + newNumber);
-    $(".summary_cost").text("Cost" + ":" + " " + cost);
-
+    cost = meal.totalPrice()*newNumber;
+    if (newNumber!=0){
+      $("#summary").fadeIn(3000);
+      $(".deliver").fadeIn();
+      $(".pick_up").fadeIn();
+      $(".summary_type").text("Type" + ":" + " " + newType);
+      $(".summary_size").text("Size" + ":" + " " + newSize);
+      $(".summary_toppings").text("Toppings" + ":" + " " + newToppings);
+      $(".summary_number").text("Quantity" + ":" + " " + newNumber);
+      $(".summary_cost").text("Cost" + ":" + " " + cost);
+    }
   });
 
 
