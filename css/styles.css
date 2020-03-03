@@ -34,3 +34,9 @@ footer{
 #delivery-form,#summary, #pickup-summary,.deliver,.pick_up,#delivery-summary{
   display:none;
 }
+#menu{
+ padding: 20px;
+ background-color:#8B4513;
+ border-radius: 20px;
+ margin-bottom: 30px
+}

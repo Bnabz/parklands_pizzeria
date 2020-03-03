@@ -77,9 +77,6 @@ $("#checkout").click(function() {
   $(".summary_cost").text("Cost" + ":" + " " + cost);
 
 
-
-
-
 });
 
 
